@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+
+:root {
+    --verdeNatureza: #4CAF50;
+    --brancoSuave: #f1f1f1;
+    --begeNatural: #F5F5DC;
+    --MarromTerra: #8D6E63;
+    --pretoSuave: #1b1b1b;
+}
+
+* {
+    color: var(--pretoSuave);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--brancoSuave);
+}
+
+header {
+    background-color: var(--brancoSuave);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logoBackground {
+    background-color: var(--verdeNatureza);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 13px;
+}
+
+.logoImg {
+    width: 25px;
+    height: 25px;
+
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoText>h1 {
+    color: var(--verdeNatureza);
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.logoText>p {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+nav>a {
+    text-decoration: none;
+    transition: color .3s;
+    padding: 0 10px;
+}
+
+nav>a:hover {
+    color: var(--verdeNatureza);
+}
+
+.navOrder >a{
+    display: flex;
+    background-color: var(--verdeNatureza);
+    padding: 0 20px;
+    border-radius: 50px;
+    transition: background-color .1s;
+    text-decoration: none;
+}
+
+.navOrder:hover>a {
+    background-color: #55c259;
+}
+
+.navOrder >a>img {
+    width: 30px;
+    height: auto;
+    padding: 0;
+}
+
+.navOrder >a>  h3 {
+    color: var(--brancoSuave);
+    padding: 0 0 0 10px;
+    font-weight: normal;
+    
+}
+
+main {
+    background-image: url(images/mainBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
