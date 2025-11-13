@@ -7,11 +7,19 @@
     --begeNatural: #F5F5DC;
     --MarromTerra: #8D6E63;
     --pretoSuave: #1b1b1b;
+    --site-max-width: 1200px;
+    --site-side-padding: 20px;
 }
 
 * {
-    color: var(--pretoSuave);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--pretoSuave);
 }
 
 body {
@@ -21,10 +29,21 @@ body {
 header {
     background-color: var(--brancoSuave);
     height: 80px;
+    /* mantém o header full-bleed; o conteúdo interno será limitado pela .container */
+}
+
+/* container central para todo o site (conteúdo limitado) */
+.container {
+    max-width: var(--site-max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--site-side-padding);
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    height: 100%;
+    /* para alinhar ao header */
 }
 
 .logo {
@@ -65,13 +84,14 @@ nav>a {
     text-decoration: none;
     transition: color .3s;
     padding: 0 10px;
+    color: var(--pretoSuave);
 }
 
 nav>a:hover {
     color: var(--verdeNatureza);
 }
 
-.navOrder >a{
+.navOrder>a {
     display: flex;
     background-color: var(--verdeNatureza);
     padding: 0 20px;
@@ -84,17 +104,17 @@ nav>a:hover {
     background-color: #55c259;
 }
 
-.navOrder >a>img {
+.navOrder>a>img {
     width: 30px;
     height: auto;
     padding: 0;
 }
 
-.navOrder >a>  h3 {
+.navOrder>a>h3 {
     color: var(--brancoSuave);
     padding: 0 0 0 10px;
     font-weight: normal;
-    
+
 }
 
 main {
@@ -102,4 +122,114 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+}
+
+.contentContainer {
+    color: var(--brancoSuave);
+    padding: 50px 0px;
+
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding-left: var(--site-side-padding);
+    padding-right: var(--site-side-padding);
+    box-sizing: border-box;
+}
+
+
+.Filosofia,
+.cardapio,
+.galeria,
+.order,
+.faq,
+.footerUp,
+.subFooter {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 40px var(--site-side-padding);
+    box-sizing: border-box;
+}
+
+.tag {
+    background-color: var(--verdeNatureza);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 240px;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin: 0px 0px 24px;
+}
+
+.tag>img {
+    height: 16px;
+    margin-right: 10px;
+}
+
+.contentContainer>h1 {
+    font-size: 3em;
+}
+
+.contentContainer>p {
+    max-width: 600px;
+}
+
+.btns {
+    display: flex;
+}
+
+.cardapioBtn {
+    background-color: var(--verdeNatureza);
+    border-radius: 50px;
+    padding: 16px 32px;
+    width: 200px;
+    text-align: center;
+    margin-right: 25px;
+}
+
+.entrega {
+    color: var(--pretoSuave);
+    background-color: var(--brancoSuave);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.entrega>img {
+    height: 38px;
+    background-color: #4caf4f33;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 20px 20px;
+}
+
+.entregaText>h3 {
+    color: var(--verdeNatureza);
+    margin: 0;
+}
+
+.entregaText>h2 {
+    margin: 0;
+}
+
+.Filosofia {
+    background-color: var(--begeNatural);
+}
+
+.sectionName {
+    color: var(--verdeNatureza);
+    text-align: center;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2em;
+}
+
+.sectionSub {
+    text-align: center;
 }
